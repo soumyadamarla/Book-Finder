@@ -1,8 +1,6 @@
 const API_KEY = 'AIzaSyBbLdFyA_RIEZONf-96LZh7WMv_TK7GEPs';
 const searchResultsContainer = document.getElementById('searchResults');
 const favoriteBooksContainer = document.getElementById('favoriteBooks');
-
-// Search Books Function
 function searchBooks() {
   const searchQuery = document.getElementById('searchInput').value;
   if (searchQuery) {
@@ -15,10 +13,8 @@ function searchBooks() {
       .catch(error => console.error('Error fetching data:', error));
   }
 }
-
-// Display Search Results
 function displaySearchResults(books) {
-  searchResultsContainer.innerHTML = ''; // Clear previous results
+  searchResultsContainer.innerHTML = '';
   if (books && books.length > 0) {
     books.forEach(book => {
       const bookInfo = book.volumeInfo;
@@ -37,8 +33,6 @@ function displaySearchResults(books) {
     searchResultsContainer.innerHTML = '<p>No results found.</p>';
   }
 }
-
-// Bookmark Book Function
 function bookmarkBook(bookId) {
   let bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
   if (!bookmarks.includes(bookId)) {
@@ -50,10 +44,8 @@ function bookmarkBook(bookId) {
     alert('Book is already in favorites.');
   }
 }
-
-// Display Bookmarked Books
 function displayBookmarkedBooks() {
-  favoriteBooksContainer.innerHTML = ''; // Clear previous bookmarks
+  favoriteBooksContainer.innerHTML = '';
   const bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
   if (bookmarks.length > 0) {
     bookmarks.forEach(bookId => {
@@ -78,8 +70,6 @@ function displayBookmarkedBooks() {
     favoriteBooksContainer.innerHTML = '<p>No favorite books yet.</p>';
   }
 }
-
-// Load Bookmarked Books on Page Load
 window.onload = function() {
   displayBookmarkedBooks();
 };
