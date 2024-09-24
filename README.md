@@ -3,7 +3,9 @@ Book Finder App is a web application that allows users to search for books, view
 
 **Technologies Used**  
 
-HTML5 and CSS3: For structuring and styling the app.  
-JavaScript (ES6): Core logic for fetching data from the Google Books API, handling bookmarks, and displaying book details.  
+HTML5 and CSS: For structuring and styling the app.  
+JavaScript : Core logic for fetching data from the Google Books API, handling bookmarks, and displaying book details.  
 Google Books API: Used to fetch book data.  
 LocalStorage: Used to store and persist user bookmarks across sessions.
+
+![Screenshot 2024-09-25 032110](https://github.com/user-attachments/assets/b277aa0b-82ec-4cf1-8c4b-3f7c8ce47b28)
